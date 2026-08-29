@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja" data-root=".">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>公的統計は、問いを持てば図になる — SSDSE 図版</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="./favicon.svg">
+  <link rel="stylesheet" href="./css/style.css">
+  
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="./index.html" aria-current="page" class="brand">SSDSE 図版</a>
+    <a href="./index.html#plates">図版目録</a>
+    <a href="./datasets.html">データセット</a>
+    <a href="./about.html">このサイトについて</a>
+  </nav>
+  <header class="hero">
+    <div class="hero-map" data-hero-map role="img" aria-label="都道府県庁所在市の牛肉支出のコロプレス"></div>
+    <div class="hero-caption">
+      <p class="kicker">SSDSE 可視化ショーケース · 非公式</p>
+      <h1>公的統計は、問いを持てば図になる。</h1>
+      <p class="lede">教育用標準データセット SSDSE を、チャートのカタログではなく、一つの問いと一つの図で見せます。入口の地図は、県庁所在市の牛肉支出（SSDSE-C-2026）。</p>
+      <p class="legend" data-hero-legend></p>
+    </div>
+  </header>
+  <section class="plate-index" id="plates">
+    <h2>図版目録</h2>
+    <p class="plate-lead">図の種類ではなく、データが立ち上がる問いから入ってください。各展示に読み方と注意があります。</p>
+    <a class="plate" href="exhibits/distribution.html">
+      <span class="plate-no">図1</span>
+      <span>
+        <p class="plate-q">都市によって、生鮮肉の買い方はどれくらい違うか</p>
+        <p class="plate-meta">分布 · 箱ひげとヒストグラム · SSDSE-C-2026</p>
+      </span>
+      <span class="plate-thumb" data-series="beef"></span>
+    </a>
+    <a class="plate" href="exhibits/scatter.html">
+      <span class="plate-no">図2</span>
+      <span>
+        <p class="plate-q">牛肉と豚肉の支出は一緒に動くか</p>
+        <p class="plate-meta">散布図 · 県庁所在市 · SSDSE-C-2026</p>
+      </span>
+      <span class="plate-thumb" data-series="pork"></span>
+    </a>
+    <a class="plate" href="exhibits/ranking.html">
+      <span class="plate-no">図3</span>
+      <span>
+        <p class="plate-q">医師はどこに多いか。人数で見るか、人口あたりで見るか</p>
+        <p class="plate-meta">横棒ランキング · SSDSE-E-2026</p>
+      </span>
+      <span class="plate-thumb" data-series="beef"></span>
+    </a>
+    <a class="plate" href="exhibits/prefecture-map.html">
+      <span class="plate-no">図4</span>
+      <span>
+        <p class="plate-q">その差は地図上で固まるか</p>
+        <p class="plate-meta">都道府県コロプレス · 階級区分の切替 · SSDSE-C-2026</p>
+      </span>
+      <span class="plate-thumb" data-series="map"></span>
+    </a>
+    <a class="plate" href="exhibits/municipality-map.html">
+      <span class="plate-no">図5</span>
+      <span>
+        <p class="plate-q">県内でも高齢化は同じか</p>
+        <p class="plate-meta">市区町村コロプレス · 1741 · SSDSE-A-2026</p>
+      </span>
+      <span class="plate-thumb" data-series="map"></span>
+    </a>
+    <a class="plate" href="exhibits/timeseries.html">
+      <span class="plate-no">図6</span>
+      <span>
+        <p class="plate-q">合計特殊出生率の順位は12年で入れ替わったか</p>
+        <p class="plate-meta">スロープ · SSDSE-B-2026</p>
+      </span>
+      <span class="plate-thumb" data-series="beef"></span>
+    </a>
+    <a class="plate" href="exhibits/timeuse.html">
+      <span class="plate-no">図7</span>
+      <span>
+        <p class="plate-q">家事時間の男女差はどこで大きいか</p>
+        <p class="plate-meta">ランキングと散布図 · SSDSE-D-2023</p>
+      </span>
+      <span class="plate-thumb" data-series="pork"></span>
+    </a>
+    <a class="plate" href="exhibits/climate.html">
+      <span class="plate-no">図8</span>
+      <span>
+        <p class="plate-q">雨と日照の季節は、北と西でどう違うか</p>
+        <p class="plate-meta">月×地点のヒートマップ · SSDSE-F-2023v3</p>
+      </span>
+      <span class="plate-thumb" data-series="beef"></span>
+    </a>
+  </section>
+  <footer class="site-footer">
+    <p>出典：独立行政法人 統計センター SSDSE（<a href="https://www.nstac.go.jp/use/literacy/ssdse/">SSDSE（教育用標準データセット）のページ</a>）を加工して作成。版：SSDSE-A-2026、SSDSE-B-2026、SSDSE-C-2026、SSDSE-D-2023、SSDSE-E-2026、SSDSE-F-2023v3。</p>
+    <p>地理データは国土交通省 <a href="https://nlftp.mlit.go.jp/ksj/">国土数値情報（行政区域データ）</a>を <a href="https://github.com/K-Oxon/Japan-map-for-BI">K-Oxon/Japan-map-for-BI</a> が簡素化したもの（CC BY 4.0）。SSDSE本体とは別出典です。</p>
+    <p>本サイトは独立行政法人統計センターの公式サイトではありません。ロゴは使用していません。利用は<a href="https://www.nstac.go.jp/info/site-policy/">統計センターのサイトポリシー</a>（政府標準利用規約 2.0 / CC BY 互換）に従います。</p>
+  </footer>
+  <script src="./vendor/d3.v7.min.js"></script>
+  <script src="./vendor/topojson-client.min.js"></script>
+  <script type="module" src="./js/exhibits/home.js"></script>
+</body>
+</html>

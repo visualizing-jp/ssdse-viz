@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja" data-root="..">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>都市によって、生鮮肉の買い方はどれくらい違うか — SSDSE-C</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="../favicon.svg">
+  <link rel="stylesheet" href="../css/style.css">
+  
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="../index.html" class="brand">SSDSE 図版</a>
+    <a href="../index.html#plates" aria-current="page">図版目録</a>
+    <a href="../datasets.html">データセット</a>
+    <a href="../about.html">このサイトについて</a>
+  </nav>
+  <main class="page">
+    <header class="exhibit-head">
+      <p class="kicker">図1 · 分布 · SSDSE-C-2026</p>
+      <h1>都市によって、生鮮肉の買い方はどれくらい違うか</h1>
+    </header>
+    
+        <figure class="chart-stage" data-box role="img" aria-label="牛肉・豚肉・鶏肉の箱ひげ図"></figure>
+    <figure class="chart-stage" data-hist role="img" aria-label="牛肉支出のヒストグラム" style="min-height:12rem"></figure>
+    <div class="note-grid">
+      <section>
+        <h2>読み方</h2>
+        <p>47都道府県庁所在市の、1世帯あたり年間支出です。箱は四分位、箱の外の点は外れ値で、消していません。京都の牛肉、新潟の豚肉、鹿児島の鶏肉が外に出ます。下のヒストグラムは牛肉だけを12本の階級にしたものです。</p>
+      </section>
+      <section>
+        <h2>注意</h2>
+        <p>単位は円で、数量と価格が混ざります。世帯人員（LA03）は都市で違います。東京都は東京都区部です。家計調査の標本であり、県全体の平均ではありません。</p>
+      </section>
+    </div>
+    <aside class="source-block">
+      <h2>出典</h2>
+      <p>独立行政法人 統計センター SSDSE-C-2026（<a href="https://www.nstac.go.jp/use/literacy/ssdse/">SSDSE（教育用標準データセット）のページ</a>）を加工して作成。</p>
+      <p>元統計：総務省統計局「家計調査」2023年（令和5年）～2025年（令和7年）</p>
+      
+      <p>本サイトは独立行政法人統計センターの公式サイトではありません。</p>
+    </aside>
+
+    <nav class="neighbors">
+      <h2>隣の展示</h2>
+      <ul>
+        <li><a href="scatter.html">図2 牛肉と豚肉は一緒に動くか</a></li>
+        <li><a href="prefecture-map.html">図4 差は地図上で固まるか</a></li>
+      </ul>
+    </nav>
+
+  </main>
+  <footer class="site-footer">
+    <p>出典：独立行政法人 統計センター SSDSE（<a href="https://www.nstac.go.jp/use/literacy/ssdse/">SSDSE（教育用標準データセット）のページ</a>）を加工して作成。版：SSDSE-A-2026、SSDSE-B-2026、SSDSE-C-2026、SSDSE-D-2023、SSDSE-E-2026、SSDSE-F-2023v3。</p>
+    <p>地理データは国土交通省 <a href="https://nlftp.mlit.go.jp/ksj/">国土数値情報（行政区域データ）</a>を <a href="https://github.com/K-Oxon/Japan-map-for-BI">K-Oxon/Japan-map-for-BI</a> が簡素化したもの（CC BY 4.0）。SSDSE本体とは別出典です。</p>
+    <p>本サイトは独立行政法人統計センターの公式サイトではありません。ロゴは使用していません。利用は<a href="https://www.nstac.go.jp/info/site-policy/">統計センターのサイトポリシー</a>（政府標準利用規約 2.0 / CC BY 互換）に従います。</p>
+  </footer>
+  <script src="../vendor/d3.v7.min.js"></script>
+  <script type="module" src="../js/exhibits/distribution.js"></script>
+</body>
+</html>
