@@ -22,7 +22,7 @@ node scripts/build-data.js
 
 | パス | 役割 |
 | --- | --- |
-| `index.html` | 入口のコロプレスと図版目録 |
+| `index.html` | 入口のコロプレスと一覧 |
 | `exhibits/` | 8展示 |
 | `scripts/build-data.js` | 公式CSV → 展示用JSON |
 | `data/raw/` | 公式CSV（版止め） |
