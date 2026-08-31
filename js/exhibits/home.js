@@ -1,4 +1,4 @@
-import { d3, observe, rootPrefix, yen, reducedMotion } from "../theme.js";
+import { observe, rootPrefix, yen, reducedMotion } from "../theme.js";
 import { renderPrefMap } from "../charts/choropleth.js";
 
 const root = rootPrefix();
@@ -29,34 +29,6 @@ export async function drawHero(el, legendEl) {
   };
   observe(el, draw);
   if (reducedMotion()) return;
-}
-
-const plates = document.querySelectorAll(".plate-thumb[data-series]");
-if (plates.length) {
-  loadJson("exhibit-c.json").then((data) => {
-    plates.forEach((el) => {
-      const key = el.dataset.series;
-      const svg = d3.create("svg").attr("viewBox", "0 0 120 40").style("width", "100%").style("height", "100%");
-      if (key === "map") {
-        el.replaceChildren();
-        return;
-      }
-      const vals = data.rows.map((d) => d[key]).filter((d) => d != null);
-      const x = d3.scaleLinear().domain([0, vals.length - 1]).range([4, 116]);
-      const y = d3.scaleLinear().domain(d3.extent(vals)).range([34, 6]);
-      const sorted = [...vals].sort(d3.ascending);
-      svg
-        .append("path")
-        .attr(
-          "d",
-          d3.line().x((_, i) => x(i)).y((d) => y(d))(sorted)
-        )
-        .attr("fill", "none")
-        .attr("stroke", "#1a4a52")
-        .attr("stroke-width", 1.4);
-      el.replaceChildren(svg.node());
-    });
-  });
 }
 
 const hero = document.querySelector("[data-hero-map]");
