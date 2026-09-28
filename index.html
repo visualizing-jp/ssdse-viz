@@ -1,108 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" data-root=".">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>公的統計は、問いを持てば図になる — SSDSE 図版</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="./favicon.svg">
-  <link rel="stylesheet" href="./css/style.css?v=cards-20260831">
-</head>
-<body>
-  <nav class="site-nav">
-    <a href="./index.html" aria-current="page" class="brand">SSDSE 図版</a>
-    <a href="./index.html#plates">一覧</a>
-    <a href="./datasets.html">データセット</a>
-    <a href="./about.html">このサイトについて</a>
-  </nav>
-  <header class="hero">
-    <div class="hero-map" data-hero-map role="img" aria-label="都道府県庁所在市の牛肉支出のコロプレス"></div>
-    <div class="hero-caption">
-      <p class="kicker">SSDSE 可視化ショーケース · 非公式</p>
-      <h1>公的統計は、問いを持てば図になる。</h1>
-      <p class="lede">教育用標準データセット SSDSE を、チャートのカタログではなく、一つの問いと一つの図で見せます。入口の地図は、県庁所在市の牛肉支出（SSDSE-C-2026）。</p>
-      <p class="legend" data-hero-legend></p>
-    </div>
-  </header>
-  <section class="plate-index" id="plates">
-    <h2>一覧</h2>
-    <p class="plate-lead">図の種類ではなく、データが立ち上がる問いから入ってください。各詳細ページに読み方と注意があります。</p>
-    <div class="plate-grid">
-      <a class="plate" href="exhibits/distribution.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図1 · SSDSE-C-2026</p>
-          <h3 class="plate-title">都市によって、生鮮肉の買い方はどれくらい違うか</h3>
-          <p class="plate-desc">47都市の牛肉・豚肉・鶏肉支出を、箱ひげとヒストグラムで比べる。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-      <a class="plate" href="exhibits/scatter.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図2 · SSDSE-C-2026</p>
-          <h3 class="plate-title">牛肉と豚肉の支出は一緒に動くか</h3>
-          <p class="plate-desc">県庁所在市の牛肉と豚肉支出の関係を、散布図で見る。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-      <a class="plate" href="exhibits/ranking.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図3 · SSDSE-E-2026</p>
-          <h3 class="plate-title">医師はどこに多いか。人数で見るか、人口あたりで見るか</h3>
-          <p class="plate-desc">医師数と人口あたり医師数の順位を、切り替えて比べる。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-      <a class="plate" href="exhibits/prefecture-map.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図4 · SSDSE-C-2026</p>
-          <h3 class="plate-title">その差は地図上で固まるか</h3>
-          <p class="plate-desc">牛肉支出の差が都道府県地図でどう固まるかを、階級区分を替えて見る。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-      <a class="plate" href="exhibits/municipality-map.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図5 · SSDSE-A-2026</p>
-          <h3 class="plate-title">県内でも高齢化は同じか</h3>
-          <p class="plate-desc">1741市区町村の高齢化率を地図で見て、県内のばらつきを確かめる。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-      <a class="plate" href="exhibits/timeseries.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図6 · SSDSE-B-2026</p>
-          <h3 class="plate-title">合計特殊出生率の順位は12年で入れ替わったか</h3>
-          <p class="plate-desc">2010年と2022年の合計特殊出生率の順位変化をスロープで追う。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-      <a class="plate" href="exhibits/timeuse.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図7 · SSDSE-D-2023</p>
-          <h3 class="plate-title">家事時間の男女差はどこで大きいか</h3>
-          <p class="plate-desc">家事時間の男女差を、ランキングと散布図の両方で見る。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-      <a class="plate" href="exhibits/climate.html">
-        <div class="plate-body">
-          <p class="plate-eyebrow">図8 · SSDSE-F-2023v3</p>
-          <h3 class="plate-title">雨と日照の季節は、北と西でどう違うか</h3>
-          <p class="plate-desc">主要地点の雨と日照を、月×地点のヒートマップで比べる。</p>
-          <span class="plate-action">詳細を見る</span>
-        </div>
-      </a>
-    </div>
-  </section>
-  <footer class="site-footer">
-    <p>出典：独立行政法人 統計センター SSDSE（<a href="https://www.nstac.go.jp/use/literacy/ssdse/">SSDSE（教育用標準データセット）のページ</a>）を加工して作成。版：SSDSE-A-2026、SSDSE-B-2026、SSDSE-C-2026、SSDSE-D-2023、SSDSE-E-2026、SSDSE-F-2023v3。</p>
-    <p>地理データは国土交通省 <a href="https://nlftp.mlit.go.jp/ksj/">国土数値情報（行政区域データ）</a>を <a href="https://github.com/K-Oxon/Japan-map-for-BI">K-Oxon/Japan-map-for-BI</a> が簡素化したもの（CC BY 4.0）。SSDSE本体とは別出典です。</p>
-    <p>本サイトは独立行政法人統計センターの公式サイトではありません。ロゴは使用していません。利用は<a href="https://www.nstac.go.jp/info/site-policy/">統計センターのサイトポリシー</a>（政府標準利用規約 2.0 / CC BY 互換）に従います。</p>
-  </footer>
-  <script src="./vendor/d3.v7.min.js"></script>
-  <script src="./vendor/topojson-client.min.js"></script>
-  <script type="module" src="./js/exhibits/home.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>教育用標準データセット SSDSE を図で読む — SSDSE 図版</title>
+    <meta name="description" content="SSDSE（教育用標準データセット）A〜F を、1セットずつ3つの切り口で見る非公式の可視化サイト。" />
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/hub/main.tsx"></script>
+  </body>
 </html>

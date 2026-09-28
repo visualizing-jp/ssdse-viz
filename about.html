@@ -1,49 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja" data-root=".">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>このサイトについて — SSDSE 図版</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="./favicon.svg">
-  <link rel="stylesheet" href="./css/style.css">
-  
-</head>
-<body>
-  <nav class="site-nav">
-    <a href="./index.html" class="brand">SSDSE 図版</a>
-    <a href="./index.html#plates">一覧</a>
-    <a href="./datasets.html">データセット</a>
-    <a href="./about.html" aria-current="page">このサイトについて</a>
-  </nav>
-  <main class="page about-body">
-    <p class="kicker">About</p>
-    <h1>このサイトについて</h1>
-    <p>独立行政法人統計センターが公開する SSDSE（教育用標準データセット）を素材にした、非公式の可視化ショーケースです。統計教育の教員、コンペを意識する高校生・大学生、可視化の学習者に向けて、問い・図・読み方・注意をセットで置いています。</p>
-    <p>任意項目のピッカー、論文の下書き、公式コンペの代替、認証つきのツール化はしません。</p>
-    <h2>データの版</h2>
-    <p>公式CSVをリポジトリにスナップショットしています。ランタイムで nstac.go.jp から取得しません。</p>
-    <ul>
-      <li>SSDSE-A-2026（市区町村）</li>
-      <li>SSDSE-B-2026（県別推移、2012–2023年）</li>
-      <li>SSDSE-C-2026（家計消費、2023–2025年）</li>
-      <li>SSDSE-D-2023（社会生活、2021年調査）</li>
-      <li>SSDSE-E-2026（基本素材）</li>
-      <li>SSDSE-F-2023v3（気候値、1991–2020年平年値）</li>
-    </ul>
-    <h2>出典と利用</h2>
-    <p>独立行政法人 統計センター SSDSE（<a href="https://www.nstac.go.jp/use/literacy/ssdse/">SSDSE（教育用標準データセット）のページ</a>）を加工して作成。</p>
-    <p>記載は公式の例に沿っています。統計センターが作ったかのように見せることはしません。</p>
-    <p>地理境界は国土交通省 国土数値情報（行政区域）を加工した TopoJSON で、SSDSE とは別ライセンスです。</p>
-    <p>統計データ分析コンペティションの案内は公式サイトを見てください。</p>
-  </main>
-  <footer class="site-footer">
-    <p>出典：独立行政法人 統計センター SSDSE（<a href="https://www.nstac.go.jp/use/literacy/ssdse/">SSDSE（教育用標準データセット）のページ</a>）を加工して作成。版：SSDSE-A-2026、SSDSE-B-2026、SSDSE-C-2026、SSDSE-D-2023、SSDSE-E-2026、SSDSE-F-2023v3。</p>
-    <p>地理データは国土交通省 <a href="https://nlftp.mlit.go.jp/ksj/">国土数値情報（行政区域データ）</a>を <a href="https://github.com/K-Oxon/Japan-map-for-BI">K-Oxon/Japan-map-for-BI</a> が簡素化したもの（CC BY 4.0）。SSDSE本体とは別出典です。</p>
-    <p>本サイトは独立行政法人統計センターの公式サイトではありません。ロゴは使用していません。利用は<a href="https://www.nstac.go.jp/info/site-policy/">統計センターのサイトポリシー</a>（政府標準利用規約 2.0 / CC BY 互換）に従います。</p>
-  </footer>
-  <script src="./vendor/d3.v7.min.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>このサイトについて — SSDSE 図版</title>
+    <meta name="description" content="SSDSE 図版の目的・データの版・出典。" />
+    <link rel="icon" href="./favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+JP:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./src/about/main.tsx"></script>
+  </body>
 </html>
