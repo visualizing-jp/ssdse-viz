@@ -4,6 +4,7 @@ import { SiteFooter } from "../shared/SiteFooter.tsx";
 import { SiteNav } from "../shared/SiteNav.tsx";
 import { csvUrl, pdfUrl, SETS, url } from "../shared/site.ts";
 import { HeroMap } from "./HeroMap.tsx";
+import { SetThumb } from "./SetThumb.tsx";
 
 function Hub() {
   return (
@@ -30,39 +31,42 @@ function Hub() {
           {SETS.map((s) => (
             <article
               key={s.id}
-              className="group relative flex flex-col rounded-xl border border-ink/10 bg-[color-mix(in_oklab,white_94%,var(--color-fill-0))] p-5 shadow-[0_8px_20px_rgba(26,44,52,0.10)] transition-[transform,box-shadow,border-color] duration-200 ease-out hover:-translate-y-1 hover:border-fill-5/30 hover:shadow-[0_14px_28px_rgba(26,44,52,0.14)] active:translate-y-0 active:scale-[0.99]"
+              className="group relative flex flex-col overflow-hidden rounded-xl border border-ink/10 bg-[color-mix(in_oklab,white_94%,var(--color-fill-0))] shadow-[0_8px_20px_rgba(26,44,52,0.10)] transition-[transform,box-shadow,border-color] duration-200 ease-out hover:-translate-y-1 hover:border-fill-5/30 hover:shadow-[0_14px_28px_rgba(26,44,52,0.14)] active:translate-y-0 active:scale-[0.99]"
             >
-              <p className="font-display text-[13px] tracking-[0.04em] text-muted">
-                <span className="mr-2 text-[20px] font-bold text-accent">{s.letter}</span>
-                {s.dataset} · {s.name}
-              </p>
-              <h3 className="pt-2 text-[19px] leading-snug font-semibold">
-                <a href={url(`${s.id}/`)} className="text-ink no-underline after:absolute after:inset-0 after:rounded-xl after:content-['']">
-                  {s.question}
-                </a>
-              </h3>
-              <p className="tnum pt-2 text-[14px] text-muted">
-                {s.grain} · {s.items}
-              </p>
-              <ul className="flex flex-wrap gap-1.5 pt-3">
-                {s.views.map((v) => (
-                  <li key={v} className="rounded-md bg-ink/[0.06] px-2 py-0.5 text-[12px] text-ink/80">
-                    {v}
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-auto flex items-center justify-between pt-5 text-[13px]">
-                <span className="font-display font-semibold text-fill-5 transition-colors duration-150 group-hover:text-accent">
-                  見る →
-                </span>
-                <span className="relative z-10 space-x-3">
-                  <a className="text-male underline hover:text-accent" href={csvUrl(s)}>
-                    公式CSV
+              <SetThumb id={s.id} />
+              <div className="flex flex-1 flex-col p-5">
+                <p className="font-display text-[13px] tracking-[0.04em] text-muted">
+                  <span className="mr-2 text-[20px] font-bold text-accent">{s.letter}</span>
+                  {s.dataset} · {s.name}
+                </p>
+                <h3 className="pt-2 text-[19px] leading-snug font-semibold">
+                  <a href={url(`${s.id}/`)} className="text-ink no-underline after:absolute after:inset-0 after:rounded-xl after:content-['']">
+                    {s.question}
                   </a>
-                  <a className="text-male underline hover:text-accent" href={pdfUrl(s)}>
-                    解説PDF
-                  </a>
-                </span>
+                </h3>
+                <p className="tnum pt-2 text-[14px] text-muted">
+                  {s.grain} · {s.items}
+                </p>
+                <ul className="flex flex-wrap gap-1.5 pt-3">
+                  {s.views.map((v) => (
+                    <li key={v} className="rounded-md bg-ink/[0.06] px-2 py-0.5 text-[12px] text-ink/80">
+                      {v}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-auto flex items-center justify-between pt-5 text-[13px]">
+                  <span className="font-display font-semibold text-fill-5 transition-colors duration-150 group-hover:text-accent">
+                    見る →
+                  </span>
+                  <span className="relative z-10 space-x-3">
+                    <a className="text-male underline hover:text-accent" href={csvUrl(s)}>
+                      公式CSV
+                    </a>
+                    <a className="text-male underline hover:text-accent" href={pdfUrl(s)}>
+                      解説PDF
+                    </a>
+                  </span>
+                </div>
               </div>
             </article>
           ))}

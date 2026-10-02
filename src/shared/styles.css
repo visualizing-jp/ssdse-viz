@@ -72,6 +72,16 @@
   }
 }
 
+.set-thumb-mark {
+  transition: transform 200ms var(--ease-out);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .group:hover .set-thumb-mark {
+    transform: scale(1.03);
+  }
+}
+
 /* 動きに酔う人には位置の変化を消す。色と不透明度は理解を助けるので残す。 */
 @media (prefers-reduced-motion: reduce) {
   *,
